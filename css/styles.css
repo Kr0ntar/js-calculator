@@ -47,6 +47,16 @@ table {
 	border-spacing: 0;
 }
 
+
+#display-screen {
+	width: 500px;
+}
+
+input[type=text] {
+	text-align: right;
+	width: 100%;
+}
+
 #body-calc {
 	position: relative;
 	margin: 0 auto;
@@ -56,6 +66,12 @@ table {
 
 #final-screen {
 	background: #fff;
+	border-top: none;
+	margin-bottom: 0;
+}
+
+#ops-screen {
+	border-bottom: none;
 }
 
 button {

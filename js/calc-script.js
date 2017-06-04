@@ -102,11 +102,11 @@ divideBtn.addEventListener('click', function() { opsHandler('/'); });
 
 equalBtn.addEventListener('click', function() {
 	expression.push(parseFloat(output.value));
-	var strEval = expression.join('');
+	var strEval = expression.join(' ');
 	var answer = eval(strEval);
 	tempnum = answer;
 	output.value = answer;
-	ops_output.value = output.value;
+	ops_output.value = "";
 	expression = [];
 	num = "";
 });
@@ -119,12 +119,12 @@ clrEntBtn.addEventListener('click', function() {
 	if(expression[expression.length - 1] == '+') {
 		tempnum = "";
 		output.value = '0';
-		ops_output.value = expression.join('');
+		ops_output.value = expression.join(' ');
 	} else {
 		tempnum = "";
 		expression.pop();
 		output.value = '0';
-		ops_output.value = expression.join('');
+		ops_output.value = expression.join(' ');
 	}
 });
 
@@ -144,7 +144,7 @@ function opsHandler(ops_input) {
 	if(expression.length == 0 && num == "") {
 		expression.push('0');
 		expression.push(ops_input);
-		ops_output.value = expression.join('');
+		ops_output.value = expression.join(' ');
 	}
 
 	if(expression.length >= 0 && num !== "") {
@@ -153,5 +153,5 @@ function opsHandler(ops_input) {
 	}
 
 	num = "";
-	ops_output.value = expression.join('');
+	ops_output.value = expression.join(' ');
 }
