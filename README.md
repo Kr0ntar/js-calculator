@@ -1,3 +1,3 @@
 # a simple calculator written in vanilla javascript
 # zipline challenge for freecodecamp
-# open source (please give me feedback when you do modify the source code..thanks!)  :)
+# please feel free to download and modify the source code.. just please give me a feedback when you do :)
