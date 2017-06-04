@@ -22,6 +22,7 @@ var divideBtn = document.querySelector('#divide-button');
 var equalBtn = document.querySelector('#equal-button');
 var clearBtn = document.querySelector('#clear-button');
 var clrEntBtn = document.querySelector('#clear-entry-button');
+var signBtn = document.querySelector('#sign-button');
 
 
 /* getting input from the buttons */
@@ -34,6 +35,37 @@ sixBtn.addEventListener('click', function() { inputHandler('6'); });
 sevenBtn.addEventListener('click', function() { inputHandler('7'); });
 eightBtn.addEventListener('click', function() { inputHandler('8'); });
 nineBtn.addEventListener('click', function() { inputHandler('9'); });
+
+signBtn.addEventListener('click', function() {
+	if(tempnum !== "") {
+		if(parseFloat(tempnum) <= -1) {
+			tempnum = Math.abs(tempnum);
+			output.value = tempnum;
+		} else if(tempnum == "0") {
+			tempnum = tempnum;
+			output.value = tempnum;
+		} else {
+			tempnum = "-" + tempnum;
+			output.value = tempnum;
+		}
+	}
+
+	if(parseFloat(num) <= -1) {
+		num = Math.abs(num);
+		output.value = num;
+	} else if(num == "" || num == "0") {
+		num = num;
+	}
+	 else {
+		num = "-" + num;
+		output.value = num;
+	}
+
+	if(num == "" && output.value !== "") {
+		return;		
+	}
+
+});
 
 zeroBtn.addEventListener('click', function() {
 	tempnum = "";
@@ -113,11 +145,10 @@ function opsHandler(ops_input) {
 		expression.push('0');
 		expression.push(ops_input);
 		ops_output.value = expression.join('');
-		//return;
 	}
 
 	if(expression.length >= 0 && num !== "") {
-		expression.push(parseFloat(num));
+		expression.push(parseFloat(output.value));
 		expression.push(ops_input);
 	}
 
