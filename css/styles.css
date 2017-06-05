@@ -158,3 +158,27 @@ button:active, button:focus {
 #clear-button, #clear-entry-button {
 	background: #a72d45;
 }
+
+@media only screen and (min-width: 240px) and (max-width: 568px) {
+	body {
+		display: flex;
+	}
+
+	#body-calc {
+		flex: 1 1 0px;
+		width: 30%;
+		margin: 20px 30px;
+	}
+
+	#zero-button, #point-button, #equal-button {
+		padding: 0;
+	}
+
+	#zero-button, #point-button {
+		flex: 1 1 0px;
+	}
+
+	#equal-button {
+		flex: 2;
+	}
+}
