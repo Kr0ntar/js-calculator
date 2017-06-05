@@ -170,7 +170,7 @@ button:active, button:focus {
 		margin: 20px 30px;
 	}
 
-	#zero-button, #point-button, #equal-button {
+	#zero-button, #point-button {
 		padding: 0;
 	}
 
@@ -180,5 +180,7 @@ button:active, button:focus {
 
 	#equal-button {
 		flex: 2;
+		padding: 5px;
+		margin-left: 5px;
 	}
 }
