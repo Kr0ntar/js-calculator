@@ -131,12 +131,21 @@ clrEntBtn.addEventListener('click', function() {
 });
 
 function inputHandler(num_input) {
+	if(tempnum === "E") {
+		return false;
+	}
 	tempnum = "";
 	num += Number(num_input);
 	output.value = num;	
 }
 
 function opsHandler(ops_input) {
+	if(tempnum === "E") {
+		return false;
+	}
+
+
+
 	if(tempnum !== "") {
 		expression.push(tempnum);
 		expression.push(ops_input);
