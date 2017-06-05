@@ -101,9 +101,17 @@ timesBtn.addEventListener('click', function() { opsHandler('*'); });
 divideBtn.addEventListener('click', function() { opsHandler('/'); });
 
 equalBtn.addEventListener('click', function() {
+	if(output.value === "E") {
+		return;
+	}
 	expression.push(parseFloat(output.value));
 	var strEval = expression.join(' ');
 	var answer = eval(strEval);
+	if(answer == Infinity || answer > 999999999999999 ) {
+		answer = "E";
+	} else {
+		answer = answer;
+	}
 	tempnum = answer;
 	output.value = answer;
 	ops_output.value = "";
@@ -116,16 +124,10 @@ clearBtn.addEventListener('click', function() {
 });
 
 clrEntBtn.addEventListener('click', function() {
-	if(expression[expression.length - 1] == '+') {
-		tempnum = "";
-		output.value = '0';
-		ops_output.value = expression.join(' ');
-	} else {
-		tempnum = "";
-		expression.pop();
-		output.value = '0';
-		ops_output.value = expression.join(' ');
-	}
+	tempnum = "";
+	num = "";
+	output.value = '0';
+	ops_output.value = expression.join(' ');
 });
 
 function inputHandler(num_input) {

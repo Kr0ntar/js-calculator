@@ -7,31 +7,49 @@
 </head>
 <body>
 	<div id="body-calc">
+		<h1>
+			CASIO	
+		</h1>
+
 		<div id="display-screen">
-			<input type="text" id="ops-screen">
+			<!-- <input type="text" id="ops-screen"> -->
+			<textarea id="ops-screen" disabled></textarea>
 			<input type="text" id="final-screen" value="0" disabled>
 		</div>
+
+		<div id="first-row" class="row">
+			<button id="clear-button">C</button>
+			<button id="clear-entry-button">CE</button>
+			<button id="sign-button">+/-</button>
+			<button id="divide-button">&divide;</button>
+		</div>
+
+		<div id="second-row" class="row">
+			<button id="seven-button">7</button>
+			<button id="eight-button">8</button>
+			<button id="nine-button">9</button>			
+			<button id="times-button">x</button>
+		</div>
+
+		<div id="third-row" class="row">
+			<button id="four-button">4</button>
+			<button id="five-button">5</button>
+			<button id="six-button">6</button>
+			<button id="minus-button">-</button>	
+		</div>
 		
-		<button id="one-button">1</button>
-		<button id="two-button">2</button>
-		<button id="three-button">3</button>
-		<button id="four-button">4</button>
-		<button id="five-button">5</button>
-		<button id="six-button">6</button>
-		<button id="seven-button">7</button>
-		<button id="eight-button">8</button>
-		<button id="nine-button">9</button>
-		<button id="zero-button">0</button>
-		<button id="point-button">.</button>
-		<button id="plus-button">+</button>
-		<button id="minus-button">-</button>
-		<button id="times-button">x</button>
-		<button id="divide-button">&divide;</button>
-		<button id="equal-button">=</button>
-		<button id="clear-button">C</button>
-		<button id="clear-entry-button">CE</button>
-		<button id="sign-button">+/-</button>
-		
+		<div id="fourth-row" class="row">
+			<button id="one-button">1</button>
+			<button id="two-button">2</button>
+			<button id="three-button">3</button>
+			<button id="plus-button">+</button>
+		</div>
+
+		<div id="fifth-row" class="row">
+			<button id="zero-button">0</button>
+			<button id="point-button">.</button>
+			<button id="equal-button">=</button>
+		</div>
 	</div>
 	<script src="js/calc-script.js"></script>
 </body>
