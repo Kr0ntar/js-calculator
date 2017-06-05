@@ -104,7 +104,7 @@ equalBtn.addEventListener('click', function() {
 	if(output.value === "E") {
 		return;
 	}
-	expression.push(parseFloat(output.value));
+	expression.push(output.value);
 	var strEval = expression.join(' ');
 	var answer = eval(strEval);
 	if(answer == Infinity || answer > 999999999999999 ) {
@@ -143,9 +143,6 @@ function opsHandler(ops_input) {
 	if(tempnum === "E") {
 		return false;
 	}
-
-
-
 	if(tempnum !== "") {
 		expression.push(tempnum);
 		expression.push(ops_input);
@@ -159,7 +156,7 @@ function opsHandler(ops_input) {
 	}
 
 	if(expression.length >= 0 && num !== "") {
-		expression.push(parseFloat(output.value));
+		expression.push(output.value);
 		expression.push(ops_input);
 	}
 
