@@ -67,7 +67,6 @@ body {
 	position: relative;
 	margin: 46px auto;
 	height: 100%;
-	/*width: 30%;*/
 	border-radius: 10px;
 }
 
@@ -133,7 +132,6 @@ h1 {
 	background: #fff;
 	text-align: right;
 	height: 30px;
-	/*line-height: -40px;*/
 	font-size: 1.5em;
 	margin-bottom: 0;
 }
@@ -142,8 +140,6 @@ button {
 	flex: 1 1 0px;
 	border-radius: 15px;
 	height: 65px;
-	/*margin-left: 10px;
-	margin-right: 10px;*/
 	margin-left: 2%;
 	margin-right: 2%;
 	background: linear-gradient(to right, #393939, #3a3a3a, #424242);
